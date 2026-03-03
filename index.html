@@ -3,111 +3,168 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Photography Brand</title>
+<title>Rakshith Photography</title>
 
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    color: #111;
+    font-family: 'Georgia', serif;
+    background: #f8f8f8;
+    color: #222;
+}
+
+/* Top Contact Bar */
+.top-bar {
+    background: #111;
+    color: #fff;
+    padding: 8px 40px;
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 30px 20px;
     background: #fff;
 }
 
-/* Instagram Icon */
-.insta-icon {
-    position: fixed;
-    top: 80px;
-    left: 20px;
-    width: 45px;
-    height: 45px;
-    z-index: 1000;
-    transition: 0.3s ease;
-}
-
-.insta-icon img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.insta-icon:hover {
-    transform: scale(1.2);
-}
-
-header {
-    background: #000;
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header h1 {
-    color: #fff;
+.logo {
+    font-size: 60px;
+    letter-spacing: 8px;
     margin: 0;
 }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 20px;
+.tagline {
+    letter-spacing: 3px;
+    font-size: 14px;
+    margin-top: 5px;
+    color: #777;
 }
 
+/* Navigation */
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #222;
+    margin: 0 15px;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    border-bottom: 1px solid #222;
+}
+
+/* Hero Section */
 .hero {
-    width: 100%;
-    height: 60vh;
-    background-image: url("web.jpeg");
-    background-size: cover;
-    background-position: center;
+    height: 80vh;
+    background: url("web.jpeg") center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
 }
 
 .hero h2 {
-    background: rgba(0,0,0,0.5);
-    padding: 15px 30px;
+    background: rgba(255,255,255,0.8);
+    padding: 20px 40px;
+    font-size: 40px;
+    letter-spacing: 2px;
 }
 
+/* Section Styling */
 .section {
-    padding: 60px 8%;
+    padding: 80px 10%;
+    background: #fff;
 }
 
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+/* Gallery */
 .gallery {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 30px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .gallery img {
-    width: 300px;
-    border-radius: 10px;
+    width: 350px;
+    border-radius: 6px;
+}
+
+/* About Section */
+.about {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+/* Contact Section */
+.contact-info {
+    text-align: center;
+    font-size: 18px;
+    line-height: 2;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+}
+
+.socials a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- Instagram Icon -->
-<a href="https://instagram.com/rakshith6321" target="_blank" class="insta-icon">
-    <img src="instagram.png" alt="Instagram">
-</a>
+<!-- Top Contact Bar -->
+<div class="top-bar">
+    📞 +91 98765 43210
+    ✉️ rakshith@email.com
+</div>
 
+<!-- Header -->
 <header>
-    <h1>Your Name Photography</h1>
+    <h1 class="logo">RAKSHITH</h1>
+    <div class="tagline">WEDDING • PORTRAIT • EVENTS</div>
+    
     <nav>
+        <a href="#home">Home</a>
         <a href="#portfolio">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
     </nav>
 </header>
 
-<div class="hero">
-    <h2>Timeless Wedding & Portrait Photography</h2>
-</div>
+<!-- Hero -->
+<section class="hero" id="home">
+    <h2>Wedding & Portrait Photographer</h2>
+</section>
 
-<section id="portfolio" class="section">
-    <h2 style="text-align:center;">Featured Work</h2>
+<!-- Portfolio -->
+<section class="section" id="portfolio">
+    <div class="section-title">Featured Work</div>
     <div class="gallery">
         <img src="image1.jpeg">
         <img src="image2.jpg">
@@ -115,6 +172,41 @@ nav a {
     </div>
 </section>
 
+<!-- About -->
+<section class="section" id="about" style="background:#f2f2f2;">
+    <div class="section-title">About Me</div>
+    <div class="about">
+        <p>
+            I am a professional wedding and portrait photographer passionate about 
+            capturing timeless moments. My goal is to tell your story through natural,
+            emotional, and elegant photography.
+        </p>
+        <p>
+            Based in India and available for destination weddings.
+        </p>
+    </div>
+</section>
+
+<!-- Contact -->
+<section class="section" id="contact">
+    <div class="section-title">Contact</div>
+    <div class="contact-info">
+        📍 Bangalore, India <br>
+        📞 +91 98765 43210 <br>
+        ✉️ rakshith@email.com <br>
+        📷 Instagram: @rakshith6321
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="socials">
+        <a href="https://instagram.com/rakshith6321" target="_blank">Instagram</a> |
+        <a href="#">Facebook</a> |
+        <a href="#">WhatsApp</a>
+    </div>
+    <p>© 2026 Rakshith Photography • All Rights Reserved</p>
+</footer>
+
 </body>
 </html>
-
