@@ -5,9 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Your Photography Brand</title>
 
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 <style>
 body {
     margin: 0;
@@ -19,13 +16,15 @@ body {
 /* Instagram Icon */
 .insta-icon {
     position: fixed;
-    top: 80px; /* moved down */
+    top: 80px;
     left: 20px;
-    font-size: 26px;
-    color: white;
+    width: 45px;
+    height: 45px;
     background: #E1306C;
-    padding: 12px;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     z-index: 1000;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
@@ -35,6 +34,12 @@ body {
 .insta-icon:hover {
     transform: scale(1.2);
     box-shadow: 0 0 20px rgba(225, 48, 108, 0.8);
+}
+
+.insta-icon svg {
+    width: 22px;
+    height: 22px;
+    fill: white;
 }
 
 header {
@@ -136,10 +141,10 @@ nav a {
 <body>
 
 <!-- Instagram Icon -->
-<a href="https://instagram.com/rakshith6321" 
-   target="_blank" 
-   class="insta-icon">
-   <i class="fab fa-instagram"></i>
+<a href="https://instagram.com/rakshith6321" target="_blank" class="insta-icon">
+    <svg viewBox="0 0 24 24">
+        <path d="M7.75 2C4.678 2 2 4.678 2 7.75v8.5C2 19.322 4.678 22 7.75 22h8.5C19.322 22 22 19.322 22 16.25v-8.5C22 4.678 19.322 2 16.25 2h-8.5zm0 2h8.5C18.44 4 20 5.56 20 7.75v8.5C20 18.44 18.44 20 16.25 20h-8.5C5.56 20 4 18.44 4 16.25v-8.5C4 5.56 5.56 4 7.75 4zm4.25 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.75-.75a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z"/>
+    </svg>
 </a>
 
 <header>
@@ -158,9 +163,9 @@ nav a {
 <section id="portfolio" class="section">
     <div class="section-title">Featured Work</div>
     <div class="gallery">
-        <img src="photo1.jpg" alt="">
-        <img src="photo2.jpg" alt="">
-        <img src="photo3.jpg" alt="">
+        <img src="photo1.jpg">
+        <img src="photo2.jpg">
+        <img src="photo3.jpg">
     </div>
 </section>
 
@@ -169,15 +174,15 @@ nav a {
     <div class="services">
         <div class="service-card">
             <h3>Wedding Photography</h3>
-            <p>Capture your biggest day with beautiful storytelling images.</p>
+            <p>Capture your biggest day beautifully.</p>
         </div>
         <div class="service-card">
             <h3>Portrait Sessions</h3>
-            <p>Custom portraits for individuals, families, and professionals.</p>
+            <p>Professional custom portrait sessions.</p>
         </div>
         <div class="service-card">
             <h3>Art & Prints</h3>
-            <p>High-quality prints and framed wall art available.</p>
+            <p>High-quality framed prints available.</p>
         </div>
     </div>
 </section>
