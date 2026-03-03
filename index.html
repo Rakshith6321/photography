@@ -6,6 +6,10 @@
 <title>Rakshith Photography</title>
 
 <style>
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Georgia', serif;
@@ -37,16 +41,21 @@ header {
     position: absolute;
     top: 35px;
     right: 40px;
-    width: 30px;
+    width: 28px;
 }
 
 .insta-icon img {
     width: 100%;
+    transition: 0.3s ease;
+}
+
+.insta-icon img:hover {
+    transform: scale(1.1);
 }
 
 /* Logo */
 .logo {
-    font-size: 60px;
+    font-size: 55px;
     letter-spacing: 8px;
     margin: 0;
 }
@@ -69,10 +78,22 @@ nav a {
     margin: 0 15px;
     font-size: 15px;
     letter-spacing: 1px;
+    position: relative;
 }
 
-nav a:hover {
-    border-bottom: 1px solid #222;
+nav a::after {
+    content: "";
+    width: 0;
+    height: 1px;
+    background: #222;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 /* Hero Section */
@@ -85,26 +106,35 @@ nav a:hover {
 }
 
 .hero h2 {
-    background: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.85);
     padding: 20px 40px;
-    font-size: 40px;
+    font-size: 36px;
     letter-spacing: 2px;
+    animation: fadeUp 1.2s ease forwards;
 }
 
 /* Section Styling */
 .section {
     padding: 80px 10%;
     background: #fff;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .section-title {
     text-align: center;
-    font-size: 32px;
+    font-size: 30px;
     margin-bottom: 50px;
     letter-spacing: 2px;
 }
 
-/* Gallery */
+/* Gallery - 4:4 Ratio */
 .gallery {
     display: flex;
     gap: 30px;
@@ -113,8 +143,15 @@ nav a:hover {
 }
 
 .gallery img {
-    width: 350px;
-    border-radius: 6px;
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: 0.4s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.08);
 }
 
 /* About Section */
@@ -141,21 +178,64 @@ footer {
     padding: 30px;
     font-size: 14px;
 }
+
+/* Animation Keyframes */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .top-bar {
+        justify-content: center;
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .insta-icon {
+        top: 20px;
+        right: 20px;
+        width: 24px;
+    }
+
+    .logo {
+        font-size: 36px;
+    }
+
+    .hero {
+        height: 60vh;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+        padding: 15px 20px;
+    }
+
+    .gallery img {
+        width: 90%;
+        height: 300px;
+    }
+}
 </style>
 </head>
 
 <body>
 
-<!-- Top Contact Bar -->
 <div class="top-bar">
     📞 +91 98765 43210
     ✉️ rakshith@email.com
 </div>
 
-<!-- Header -->
 <header>
 
-    <!-- Instagram Icon -->
     <a href="https://instagram.com/rakshith6321" target="_blank" class="insta-icon">
         <img src="instagram.png" alt="Instagram">
     </a>
@@ -171,22 +251,19 @@ footer {
     </nav>
 </header>
 
-<!-- Hero -->
 <section class="hero" id="home">
     <h2>Wedding & Portrait Photographer</h2>
 </section>
 
-<!-- Portfolio -->
 <section class="section" id="portfolio">
     <div class="section-title">Featured Work</div>
     <div class="gallery">
-        <img src="image1.jpeg">
-        <img src="image2.jpg">
-        <img src="image3.jpg">
+        <img src="image1.jpeg" alt="">
+        <img src="image2.jpg" alt="">
+        <img src="image3.jpg" alt="">
     </div>
 </section>
 
-<!-- About -->
 <section class="section" id="about" style="background:#f2f2f2;">
     <div class="section-title">About Me</div>
     <div class="about">
@@ -195,13 +272,9 @@ footer {
             capturing timeless moments. My goal is to tell your story through natural,
             emotional, and elegant photography.
         </p>
-        <p>
-            Based in India and available for destination weddings.
-        </p>
     </div>
 </section>
 
-<!-- Contact -->
 <section class="section" id="contact">
     <div class="section-title">Contact</div>
     <div class="contact-info">
@@ -212,10 +285,23 @@ footer {
     </div>
 </section>
 
-<!-- Footer -->
 <footer>
     © 2026 Rakshith Photography • All Rights Reserved
 </footer>
+
+<script>
+const sections = document.querySelectorAll('.section');
+
+window.addEventListener('scroll', () => {
+    sections.forEach(section => {
+        const position = section.getBoundingClientRect().top;
+        const screenHeight = window.innerHeight;
+        if(position < screenHeight - 100){
+            section.classList.add('show');
+        }
+    });
+});
+</script>
 
 </body>
 </html>
