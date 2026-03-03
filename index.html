@@ -1,100 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Photography Brand</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: #111;
-            background: #fff;
-        }
-        header {
-            background: #000;
-            padding: 15px 30px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-        header h1 {
-            color: #fff;
-            font-size: 24px;
-            margin: 0;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin-left: 20px;
-            font-size: 14px;
-        }
-        .hero {
-            width: 100%;
-            height: 60vh;
-            background-image: url("hero-placeholder.jpg");
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #fff;
-        }
-        .hero h2 {
-            font-size: 42px;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 15px 30px;
-        }
-        .section {
-            padding: 60px 8%;
-        }
-        .section-title {
-            font-size: 28px;
-            margin-bottom: 20px;
-            text-align: center;
-            color: #333;
-        }
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-        .gallery img {
-            width: 300px;
-            border-radius: 10px;
-        }
-        .services {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .service-card {
-            width: 250px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            text-align: center;
-        }
-        .footer {
-            text-align: center;
-            padding: 40px 20px;
-            background: #f2f2f2;
-            font-size: 14px;
-        }
-        @media(max-width:768px) {
-            .hero h2 { font-size: 28px; }
-            .gallery img { width: 100%; }
-            .services { flex-direction: column; align-items: center; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Photography Brand</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #111;
+    background: #fff;
+}
+
+/* Instagram Icon */
+.insta-icon {
+    position: fixed;
+    top: 80px; /* moved down */
+    left: 20px;
+    font-size: 26px;
+    color: white;
+    background: #E1306C;
+    padding: 12px;
+    border-radius: 50%;
+    text-decoration: none;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.insta-icon:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px rgba(225, 48, 108, 0.8);
+}
+
+header {
+    background: #000;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 24px;
+    margin: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+.hero {
+    width: 100%;
+    height: 60vh;
+    background-image: url("hero-placeholder.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h2 {
+    font-size: 42px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px 30px;
+}
+
+.section {
+    padding: 60px 8%;
+}
+
+.section-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.services {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    width: 250px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: #f2f2f2;
+    font-size: 14px;
+}
+
+@media(max-width:768px) {
+    .hero h2 { font-size: 28px; }
+    .gallery img { width: 100%; }
+    .services { flex-direction: column; align-items: center; }
+}
+</style>
 </head>
+
 <body>
+
+<!-- Instagram Icon -->
+<a href="https://instagram.com/rakshith6321" 
+   target="_blank" 
+   class="insta-icon">
+   <i class="fab fa-instagram"></i>
+</a>
 
 <header>
     <h1>Your Name Photography</h1>
@@ -112,9 +158,9 @@
 <section id="portfolio" class="section">
     <div class="section-title">Featured Work</div>
     <div class="gallery">
-        <img src="photo1.jpg" alt="Photo Work 1">
-        <img src="photo2.jpg" alt="Photo Work 2">
-        <img src="photo3.jpg" alt="Photo Work 3">
+        <img src="photo1.jpg" alt="">
+        <img src="photo2.jpg" alt="">
+        <img src="photo3.jpg" alt="">
     </div>
 </section>
 
@@ -138,8 +184,7 @@
 
 <section id="contact" class="section">
     <div class="section-title">Contact Me</div>
-    <p style="text-align:center;">(406) 600-7617 | Email: <a href="mailto:bruce@406photo.com">bruce@406photo.com</a></p>
-    <p style="text-align:center;">Location: Bozeman, Montana</p>
+    <p style="text-align:center;">Email: your@email.com</p>
 </section>
 
 <div class="footer">
