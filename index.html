@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Photography Brand</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #111;
+            background: #fff;
+        }
+        header {
+            background: #000;
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        header h1 {
+            color: #fff;
+            font-size: 24px;
+            margin: 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+        .hero {
+            width: 100%;
+            height: 60vh;
+            background-image: url("hero-placeholder.jpg");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+        .hero h2 {
+            font-size: 42px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 15px 30px;
+        }
+        .section {
+            padding: 60px 8%;
+        }
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 300px;
+            border-radius: 10px;
+        }
+        .services {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .service-card {
+            width: 250px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: #f2f2f2;
+            font-size: 14px;
+        }
+        @media(max-width:768px) {
+            .hero h2 { font-size: 28px; }
+            .gallery img { width: 100%; }
+            .services { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Your Name Photography</h1>
+    <nav>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <h2>Timeless Wedding & Portrait Photography</h2>
+</div>
+
+<section id="portfolio" class="section">
+    <div class="section-title">Featured Work</div>
+    <div class="gallery">
+        <img src="photo1.jpg" alt="Photo Work 1">
+        <img src="photo2.jpg" alt="Photo Work 2">
+        <img src="photo3.jpg" alt="Photo Work 3">
+    </div>
+</section>
+
+<section id="services" class="section" style="background:#fafafa">
+    <div class="section-title">Services I Offer</div>
+    <div class="services">
+        <div class="service-card">
+            <h3>Wedding Photography</h3>
+            <p>Capture your biggest day with beautiful storytelling images.</p>
+        </div>
+        <div class="service-card">
+            <h3>Portrait Sessions</h3>
+            <p>Custom portraits for individuals, families, and professionals.</p>
+        </div>
+        <div class="service-card">
+            <h3>Art & Prints</h3>
+            <p>High-quality prints and framed wall art available.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <div class="section-title">Contact Me</div>
+    <p style="text-align:center;">(406) 600-7617 | Email: <a href="mailto:bruce@406photo.com">bruce@406photo.com</a></p>
+    <p style="text-align:center;">Location: Bozeman, Montana</p>
+</section>
+
+<div class="footer">
+    &copy; 2026 Your Name Photography • All Rights Reserved
+</div>
+
+</body>
+</html>
